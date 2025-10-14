@@ -32,7 +32,6 @@
     </form>
   </section>
 
-  <!-- Part 2: Bootstrap Forms -->
   <section>
     <h3 class="mt-5">Part 2: Bootstrap Forms</h3>
 
@@ -65,7 +64,6 @@
     </form>
   </section>
 
-  <!-- Part 3: Advanced Form Project -->
   <section>
     <h3 class="mt-5">Part 3: Advanced Form Project</h3>
 
@@ -158,19 +156,16 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-  // Validation function for Part 3
   const advancedForm = document.getElementById('advancedForm');
   advancedForm.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission
     const inputs = advancedForm.querySelectorAll('input, textarea, select');
     let isValid = true;
 
-    // Check if the password and confirm password match
     const password = document.getElementById('password');
     const confirmPassword = document.getElementById('confirmPassword');
     const confirmPasswordError = document.getElementById('confirmPasswordError');
 
-    // Validate password first (it needs to meet the minimum length requirement)
     if (!password.checkValidity()) {
       confirmPassword.classList.add('is-invalid');
       confirmPassword.classList.remove('is-valid');
@@ -187,7 +182,6 @@
       confirmPasswordError.textContent = "";
     }
 
-    // Additional validation checks for other fields
     inputs.forEach(input => {
       if (!input.checkValidity()) {
         input.classList.add('is-invalid');
