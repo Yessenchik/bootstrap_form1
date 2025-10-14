@@ -1,20 +1,16 @@
-/* Set the primary color to orange */
 :root {
     --primary-color: #FF6F00; /* Orange */
     --secondary-color: #FF9100; /* Lighter Orange */
 }
 
-/* Body background color */
 body {
     background-color: #FFF8E1; /* Light Orange background */
 }
 
-/* Header */
 h1, h3 {
     color: var(--primary-color);
 }
 
-/* Form button styles */
 .btn-primary {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
@@ -35,7 +31,6 @@ h1, h3 {
     border-color: #FFB74D;
 }
 
-/* Form label and inputs */
 label {
     color: var(--primary-color);
 }
@@ -65,7 +60,6 @@ label {
     font-size: 0.875em;
 }
 
-/* Add space between form fields */
 .form-group {
     margin-bottom: 1.5rem; /* Adjust this value for more/less space */
 }
