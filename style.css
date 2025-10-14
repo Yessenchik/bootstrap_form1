@@ -1,0 +1,75 @@
+/* Set the primary color to orange */
+:root {
+    --primary-color: #FF6F00; /* Orange */
+    --secondary-color: #FF9100; /* Lighter Orange */
+}
+
+/* Body background color */
+body {
+    background-color: #FFF8E1; /* Light Orange background */
+}
+
+/* Header */
+h1, h3 {
+    color: var(--primary-color);
+}
+
+/* Form button styles */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-secondary {
+    background-color: #FFCC80; /* Lighter Orange */
+    border-color: #FFCC80;
+}
+
+.btn-secondary:hover {
+    background-color: #FFB74D; /* Darker Orange */
+    border-color: #FFB74D;
+}
+
+/* Form label and inputs */
+label {
+    color: var(--primary-color);
+}
+
+.form-control {
+    border-color: var(--primary-color);
+}
+
+.form-control:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.25rem rgba(255, 145, 0, 0.25);
+}
+
+.is-invalid {
+    border-color: #f44336; /* Red for error */
+}
+
+.is-valid {
+    border-color: #4caf50; /* Green for success */
+}
+
+.invalid-feedback {
+    color: #f44336; /* Red */
+}
+
+.invalid-feedback {
+    font-size: 0.875em;
+}
+
+/* Add space between form fields */
+.form-group {
+    margin-bottom: 1.5rem; /* Adjust this value for more/less space */
+}
+
+.form-group.row {
+    margin-bottom: 1.5rem; /* Add spacing to row-formatted groups */
+}

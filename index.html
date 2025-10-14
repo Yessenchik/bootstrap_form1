@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 5: Forms and Validation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container mt-5">
+
+  <section>
+    <h3>Part 1: Basic HTML Forms</h3>
+    <form action="#" method="POST">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+  </section>
+
+  <!-- Part 2: Bootstrap Forms -->
+  <section>
+    <h3 class="mt-5">Part 2: Bootstrap Forms</h3>
+
+    <form id="validationForm" action="#" method="POST" novalidate>
+      <div class="form-group row">
+        <label for="name" class="col-sm-2 col-form-label">Name:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+          <div class="invalid-feedback">Name is required.</div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="email" class="col-sm-2 col-form-label">Email:</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+          <div class="invalid-feedback">Please provide a valid email address.</div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="message" class="col-sm-2 col-form-label">Message:</label>
+        <div class="col-sm-10">
+          <textarea class="form-control" id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
+          <div class="invalid-feedback">Please enter a message.</div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+  </section>
+
+  <!-- Part 3: Advanced Form Project -->
+  <section>
+    <h3 class="mt-5">Part 3: Advanced Form Project</h3>
+
+    <form id="advancedForm" action="#" method="POST" novalidate>
+      <div class="form-group row">
+        <label for="firstName" class="col-sm-2 col-form-label">First Name:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your first name" required>
+          <div class="invalid-feedback">First name is required.</div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="lastName" class="col-sm-2 col-form-label">Last Name:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your last name" required>
+          <div class="invalid-feedback">Last name is required.</div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="email" class="col-sm-2 col-form-label">Email:</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="email1" name="email" placeholder="Enter your email" required>
+          <div class="invalid-feedback">Please provide a valid email address.</div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="password" class="col-sm-2 col-form-label">Password:</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required minlength="8">
+          <div class="invalid-feedback">Password must be at least 8 characters long.</div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="confirmPassword" class="col-sm-2 col-form-label">Confirm Password:</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+          <div class="invalid-feedback" id="confirmPasswordError">Passwords do not match or do not meet the criteria.</div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-2">Gender:</label>
+        <div class="col-sm-10">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" value="male" required>
+            <label class="form-check-label">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" value="female" required>
+            <label class="form-check-label">Female</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-2">Hobbies:</label>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="hobbies" value="sports">
+            <label class="form-check-label">Sports</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="hobbies" value="music">
+            <label class="form-check-label">Music</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="country" class="col-sm-2 col-form-label">Country:</label>
+        <div class="col-sm-10">
+          <select class="form-control" id="country" name="country" required>
+            <option value="kz">Kazakhstan</option>
+            <option value="us">USA</option>
+            <option value="ru">Russia</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      <button type="reset" class="btn btn-secondary mt-3">Reset</button>
+    </form>
+  </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Validation function for Part 3
+  const advancedForm = document.getElementById('advancedForm');
+  advancedForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+    const inputs = advancedForm.querySelectorAll('input, textarea, select');
+    let isValid = true;
+
+    // Check if the password and confirm password match
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById('confirmPassword');
+    const confirmPasswordError = document.getElementById('confirmPasswordError');
+
+    // Validate password first (it needs to meet the minimum length requirement)
+    if (!password.checkValidity()) {
+      confirmPassword.classList.add('is-invalid');
+      confirmPassword.classList.remove('is-valid');
+      confirmPasswordError.textContent = "Password must be at least 8 characters long.";
+      isValid = false;
+    } else if (password.value !== confirmPassword.value) { // Check if password matches confirm password
+      confirmPassword.classList.add('is-invalid');
+      confirmPassword.classList.remove('is-valid');
+      confirmPasswordError.textContent = "Passwords do not match.";
+      isValid = false;
+    } else {
+      confirmPassword.classList.add('is-valid');
+      confirmPassword.classList.remove('is-invalid');
+      confirmPasswordError.textContent = "";
+    }
+
+    // Additional validation checks for other fields
+    inputs.forEach(input => {
+      if (!input.checkValidity()) {
+        input.classList.add('is-invalid');
+        input.classList.remove('is-valid');
+        isValid = false;
+      } else {
+        input.classList.add('is-valid');
+        input.classList.remove('is-invalid');
+      }
+    });
+
+    if (isValid) {
+      advancedForm.submit(); // Submit the form if valid
+    }
+  });
+</script>
+</body>
+</html>
